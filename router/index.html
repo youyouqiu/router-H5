@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src='./router.js'></script>
+  <script src='./index.js'></script>
+  <style>
+    html, body, div, a {
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+    div.routerBox {
+      width: 100%;
+      height: 69px;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    a.routerView {
+      width: 30%;
+      list-style-type: none;
+      background-color: white;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bolder;
+      color: rgb(78, 110, 242);
+      text-decoration: none;
+    }
+    a.routerView:not(:last-child) {
+      border-right: 3px solid  rgb(78, 110, 242);
+    }
+    a.routerView:hover {
+      cursor: pointer;
+    }
+    div.box {
+      width: 100%;
+      height: 100%;
+      padding-top: 69px;
+      background-color: rgb(78, 110, 242);
+      display: flex;
+      flex-wrap: nowrap;
+      flex-flow: column;
+      position: relative;
+    }
+    div.content {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(78, 110, 242);
+      display: flex;
+      flex-wrap: nowrap;
+      flex-flow: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 69px;
+      font-weight: bolder;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id='box' class='box'>
+    <div class='routerBox'>
+      <a href='#/home' class='routerView'>HTML</a>
+      <a href='#/css' class='routerView'>CSS</a>
+      <a href='#/javascript' class='routerView'>JAVASCRIPT</a>
+    </div>
+    <div id='content' class='content'>HTML</div>
+  </div>
+</body>
+</html>
